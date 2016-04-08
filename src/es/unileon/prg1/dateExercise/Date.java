@@ -44,16 +44,37 @@ public class Date {
 		
 		this.day=day;
 		
+	}
+	
+	public void setMonth(int month){
+		
+		this.month=month;
+		
+	}
+	
+	public void setyear(int year){
+		
+		this.year=year;
 			
 	}
-	 
-/*		
-		if(year==this.year){
-			
-			this.year.isSameYear(int year);		
-			
-		}
-*/	
+	 	
+	public boolean isSameDay(Date day){
+		
+		boolean isSameDay= this.day==day.getDay();
+		
+		return isSameDay;
+						
+	}
+	
+	public boolean isSameMonth(Date month){
+	
+		this.month==month.getMonth();
+		
+		return isSameMonth;
+		
+	}
+	
+	
 	public String monthName(){
 		
 		String monthReturn=null;
