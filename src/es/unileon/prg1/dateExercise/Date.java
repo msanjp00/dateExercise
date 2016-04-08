@@ -1,11 +1,20 @@
 package es.unileon.prg1.dateExercise;
 
-public class Date (int year, int day, int month;) {
+public class Date {
 		
-		int year;
-		int day;
-		int month;
+		private int day;
+		private int month;
+		private int year;
 		
+	public Date() {
+		
+		this.day=1;
+		this.month=1;
+		this.month=2077;		
+		
+	}
+	
+	
 	
 		//comprobar
 		if(year==this.year){
@@ -51,33 +60,64 @@ public class Date (int year, int day, int month;) {
 		
 	}
 	
-	public 	
+	public 
 		
 		if ((this.day<0)||(this.day>31)){
 		
 			// falta
 		
-		}if((this.month<0)||(this.month>12){
+		}
+	
+	public
+	
+		if((this.month<0)||(this.month>12){
 		
 			//falta
 		
-		}if(this.year<0){
+		}
+		   
+	public 	
+		
+		if(this.year<0){
 		
 			//falta
 		
 		}else{
 			
 		}
+	
+	public String seasonYear(){
+	
+		String seasonReturn;
 		
 		switch (season) {
 			
-			case 1-3: System.out.println("Winter"):
-			case 4-6: System.out.println("Spring");
-			case 7-9: System.out.println("Summer");
-			case 10-12: System.out.println("Autumn/Fall");
+			case 1: 
+			case 2: 
+			case 3: seasonReturn="Winter";
+				break;
+				
+			case 4:
+			case 5:
+			case 6: seasonReturn="Spring";
+				break;
+				
+			case 7:
+			case 8:
+			case 9: seasonReturn="Summer";
+				break;
+			
+			case 10:
+			case 11:
+			case 12: seasonReturn="Autumn/Fall";
+				break;
+				
 			
 		}
 		
+		return seasonReturn;
+		
+	}
 			
 			monthLeft=0;
 			for(i=this.month;i<12;i++){
