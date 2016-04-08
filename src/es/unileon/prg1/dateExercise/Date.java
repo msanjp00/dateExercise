@@ -213,18 +213,36 @@ public boolean isSame(Date date){
 	
 	public int monthLeft(int monthLeft){
 	
-			monthLeft=0;
-			for(int i=this.month;i<12;i++){
+		
+		for(int i=this.month;i<12;i++){
 				
-				monthLeft=monthLeft+1;
+			monthLeft=monthLeft+1;
 				
 			}
 		return monthLeft;
 	}
+	
+	public String printDate(){
 		
-	
-	
-	
+		StringBuffer printDate= new StringBuffer();
+		printDate.append(getDay()+" "+getMonth()+" "+getYear());
 		
+		return printDate.toString();
+				
+	}
+	
+	public String dateEndMonth(){
+		
+		StringBuffer dateEndMonth = new StringBuffer();
+		
+		for(int i=this.day;i<=31;i++){
+			
+		dateEndMonth.append(i +" "+ getMonth() +" "+ getYear()+"\n");
+			
+		}
+		
+		return dateEndMonth.toString();
+		
+	}
 	
 }
