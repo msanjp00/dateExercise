@@ -22,38 +22,43 @@ public class Date {
 		
 	}
 	
-	public getDay(){
+	public int getDay(){
 		
 		return this.day;
 		
 	}
 	
-	public getMonth(){
+	public int getMonth(){
 		
 		return this.month;
 		
 	}
 	
-	public getYear(){
+	public int getYear(){
 		
 		return this.year;
 		
 	}
 	
-	
-	 
+	public void setDay(int day){
 		
+		this.day=day;
+		
+			
+	}
+	 
+/*		
 		if(year==this.year){
 			
 			this.year.isSameYear(int year);		
 			
 		}
-	
+*/	
 	public String monthName(){
 		
-		String monthReturn;
+		String monthReturn=null;
 		
-		switch (monthName) {
+		switch (this.month) {
 				
 			case 1: monthReturn="January";
 				break;
@@ -82,11 +87,11 @@ public class Date {
 				
 		}
 		
-		return monttReturn;
+		return monthReturn;
 		
 	}
 	
-	public 
+/*	public 
 		
 		if ((this.day<0)||(this.day>31)){
 		
@@ -96,7 +101,7 @@ public class Date {
 	
 	public
 	
-		if((this.month<0)||(this.month>12){
+		if((this.month<0)||(this.month>12)){
 		
 			//falta
 		
@@ -111,10 +116,10 @@ public class Date {
 		}else{
 			
 		}
+*/	
+	public String seasonYear(int season){
 	
-	public String seasonYear(){
-	
-		String seasonReturn;
+		String seasonReturn=null;
 		
 		switch (season) {
 			
@@ -144,15 +149,17 @@ public class Date {
 		return seasonReturn;
 		
 	}
-			
+	
+	public int monthLeft(int monthLeft){
+	
 			monthLeft=0;
-			for(i=this.month;i<12;i++){
+			for(int i=this.month;i<12;i++){
 				
-				monthLeft=montLeft+1
+				monthLeft=monthLeft+1;
 				
 			}
-		
-		
+		return monthLeft;
+	}
 		
 	
 	
