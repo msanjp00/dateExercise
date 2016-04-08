@@ -14,9 +14,35 @@ public class Date {
 		
 	}
 	
+	public Date(int day, int month, int year) {
+		
+		this.day=day;
+		this.month=month;
+		this.year=year;
+		
+	}
+	
+	public getDay(){
+		
+		return this.day;
+		
+	}
+	
+	public getMonth(){
+		
+		return this.month;
+		
+	}
+	
+	public getYear(){
+		
+		return this.year;
+		
+	}
 	
 	
-		//comprobar
+	 
+		
 		if(year==this.year){
 			
 			this.year.isSameYear(int year);		
