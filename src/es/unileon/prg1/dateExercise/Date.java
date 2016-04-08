@@ -41,12 +41,6 @@ public class Date {
 		
 	}
 	
-	public int getDate(){
-		
-	//	return this.Date;
-		return 0;
-	}
-	
 	public void setDay(int day){
 		
 		this.day=day;
@@ -89,15 +83,15 @@ public class Date {
 		
 	}
 	
-/*	No sé exáctamente que se pedía con isSame, pero solo he llegado a esto
+
 public boolean isSame(Date date){
-		
-		boolean isSame= ((this.day) && (this.month) && (this.year)==month.getDate();	
+	
+		boolean isSame= ((this.day==date.getDay()) && (this.month==date.getMonth()) && (this.year==date.getYear()));	
 		
 		return isSame;
 		
 	}
-*/	
+	
 	
 	public String monthName(){
 		
@@ -243,6 +237,61 @@ public boolean isSame(Date date){
 		
 		return dateEndMonth.toString();
 		
+	}
+	
+	public int dayOfMonth (int dayOfMonth){
+		
+		int monthRight=0;
+		
+		switch (dayOfMonth){
+		
+			case 1: monthRight=31;
+				break;
+			case 2: monthRight=27;
+				break;
+			case 3: monthRight=31;
+				break;
+			case 4: monthRight=30;
+				break;
+			case 5: monthRight=31;
+				break;
+			case 6: monthRight=30;
+				break;
+			case 7: monthRight=31;
+				break;
+			case 8: monthRight=31;
+				break;
+			case 9: monthRight=30;
+				break;
+			case 10: monthRight=31;
+				break;
+			case 11: monthRight=30;
+				break;
+			case 12: monthRight=31;
+				break;
+				
+		}
+		
+		return monthRight;
+	
+	}
+	
+	public String printAllMonthOf(){
+		
+		StringBuffer printAllMonthOf= new StringBuffer();
+		
+		for(int i=1;i<=12;i++){
+			
+			if (dayOfMonth(this.month)==dayOfMonth(i)){
+				
+				printAllMonthOf.append(" " + i + " ");
+				
+			}
+			
+			
+		}
+			
+		return printAllMonthOf.toString();
 	}
 	
 }
