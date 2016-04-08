@@ -5,6 +5,7 @@ public class Date {
 		private int day;
 		private int month;
 		private int year;
+	
 		
 	public Date() {
 		
@@ -40,6 +41,12 @@ public class Date {
 		
 	}
 	
+	public int getDate(){
+		
+	//	return this.Date;
+		return 0;
+	}
+	
 	public void setDay(int day){
 		
 		this.day=day;
@@ -68,12 +75,29 @@ public class Date {
 	
 	public boolean isSameMonth(Date month){
 	
-		this.month==month.getMonth();
+		boolean isSameMonth= this.month==month.getMonth();
 		
 		return isSameMonth;
 		
 	}
 	
+	public boolean isSameYear(Date year){
+		
+		boolean isSameYear= this.year==year.getYear();
+		
+		return isSameYear;
+		
+	}
+	
+/*	No sé exáctamente que se pedía con isSame, pero solo he llegado a esto
+public boolean isSame(Date date){
+		
+		boolean isSame= ((this.day) && (this.month) && (this.year)==month.getDate();	
+		
+		return isSame;
+		
+	}
+*/	
 	
 	public String monthName(){
 		
@@ -112,32 +136,48 @@ public class Date {
 		
 	}
 	
-/*	public 
+	public boolean checkDay(){
 		
 		if ((this.day<0)||(this.day>31)){
 		
-			// falta
-		
-		}
-	
-	public
-	
-		if((this.month<0)||(this.month>12)){
-		
-			//falta
-		
-		}
-		   
-	public 	
-		
-		if(this.year<0){
-		
-			//falta
+		return false;
 		
 		}else{
 			
+		return true;
+			
 		}
-*/	
+	
+	}
+	
+	public boolean checkMonth(){
+	
+		if((this.month<0)||(this.month>12)){
+		
+		return false;
+		
+		}else{
+		
+		return true;
+			
+		}
+		
+	}
+		   
+	public 	boolean checkYear(){
+		
+		if(this.year<0){
+		
+		return false;
+		
+		}else{
+			
+		return true;
+			
+		}
+		
+	}
+	
 	public String seasonYear(int season){
 	
 		String seasonReturn=null;
